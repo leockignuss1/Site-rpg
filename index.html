@@ -9,19 +9,84 @@
     <h1>Ficha de Personagem</h1>
 
     <div>
+        <label>Foto do Personagem (URL): </label>
+        <input type="file" id="fotoUpload" accept="image/*">
+    </div>
+
+    <div id="fotoContainer">
+        <img id="fotoPersonagem" src="" alt="Foto do Personagem" style="max-width: 100%"; height: auto; display: none;">
+    </div>
+
+    <div>
         <label>Nome: </label>
         <input type="text" id="nome" placeholder="Digite o nome">
     </div>
 
     <div>
-        <label>Força: </label>
-        <input type="number" id="forca" value="0">
+        <label>Classe: </label>
+        <input type="text" id="classe">
+    </div>
+
+    <hr>
+    
+    <div>
+        <label>Vida: </label>
+        <input type="number" id="vida" value="0">
     </div>
 
     <div>
-        <label>Vida: </label>
-        <input type="number" id="vida" value="100">
+        <label>Sanidade: </label>
+        <input type="number" id="sanidade" value="0">
     </div>
+
+    <div>
+        <label>PE: </label>
+        <input type="number" id="PE" value="0">
+    </div>
+
+    <div>
+        <label>Alma: </label>
+        <input type="number" id="alma" value="0">
+    </div>
+
+    <div>
+        <label>Aura: </label>
+        <input type="number" id="aura" value="0">
+    </div>
+
+    <hr> <h2>Fundamentos</h2>
+
+    <div>
+        <label>FOR</label>
+        <input type="number" id="forca" value="0">
+    </div>
+    
+    <div>
+        <label>CON</label>
+        <input type="number" id="constituicao" value="0">
+    </div>
+
+    <div>
+        <label>INT</label>
+        <input type="number" id="inteligencia" value="0">
+    </div>
+
+    <div>
+        <label>AGI</label>
+        <input type="number" id="agilidade" value="0">
+    </div>
+
+    <div>
+        <label>POD</label>
+        <input type="number" id="poder" value="0">
+    </div>
+
+    <div>
+        <label>PRE</label>
+        <input type="number" id="presenca" value="0">
+    </div>
+    
+    <hr>
 
     <button id="salvarBtn">Salvar</button>
 
