@@ -8,23 +8,30 @@
 <body>
     <h1>Ficha de Personagem</h1>
 
-    <div>
-        <label>Foto do Personagem (URL): </label>
-        <input type="file" id="fotoUpload" accept="image/*">
-    </div>
+    <div class="header-ficha">
 
-    <div id="fotoContainer">
-        <img id="fotoPersonagem" src="" alt="Foto do Personagem" style="max-width: 100%"; height: auto; display: none;">
-    </div>
+        <div class="foto-info">
+            <div>
+                <label>Foto do Personagem:</label>
+                <input type="file" id="fotoUpload" accept="image/*">
+            </div>
 
-    <div>
-        <label>Nome: </label>
-        <input type="text" id="nome" placeholder="Digite o nome">
-    </div>
+            <div id="fotoContainer">
+                <img id="fotoPersonagem" src="" alt="Foto do Personagem" style="max-width: 100%"; height: auto; display: none;">
+            </div>
+        </div>
 
-    <div>
-        <label>Classe: </label>
-        <input type="text" id="classe">
+        <div class="dados-basicos">
+            <div>
+                <label>Nome: </label>
+                <input type="text" id="nome" placeholder="Digite o nome">
+            </div>
+
+            <div>
+                <label>Classe: </label>
+                <input type="text" id="classe">
+            </div>
+        </div>
     </div>
 
     <hr>

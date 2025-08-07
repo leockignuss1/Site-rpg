@@ -1,46 +1,4 @@
-document.getElementById("salvarBtn").addEventListener("click", function() {
-    const nome = document.getElementById("nome").value;
-    const classe = document.getElementById("classe").value;
-    const fotoUpload = document.getElementById("fotoUpload").value;
-    const vida = document.getElementById("vida").value;
-    const sanidade = document.getElementById("sanidade").value;
-    const PE = document.getElementById("PE").value;
-    const alma = document.getElementById("alma").value;
-    const aura = document.getElementById("aura").value;
-    const poder = document.getElementById("poder").value;
-    const inteligencia = document.getElementById("inteligencia").value;
-    const agilidade = document.getElementById("agilidade").value;
-    const forca = document.getElementById("forca").value;
-    const constituicao = document.getElementById("constituicao").value;
-    const presenca = document.getElementById("presenca").value;
-    const fotoBase64 = document.getElementById("fotoPersonagem").src;
-
-
-   const ficha = {
-        nome: nome,
-        classe: classe,
-        fotoUpload: fotoUpload,
-        vida: vida,
-        sanidade: sanidade,
-        pe: PE,
-        alma: alma,
-        aura: aura,
-        poder: poder,
-        inteligencia: inteligencia,
-        agilidade: agilidade,
-        forca: forca,
-        constituicao: constituicao,
-        presenca: presenca,
-        fotoBase64: fotoBase64
-    };
-
-    // Salvar o objeto no Local Storage como texto (JSON)
-    localStorage.setItem("fichaRPG", JSON.stringify(ficha));
-
-    alert("Ficha salva no navegador!");
-});
-
- document.getElementById("fotoUpload").addEventListener("change", function(event) {
+document.getElementById("fotoUpload").addEventListener("change", function(event) {
         const file = event.target.files[0];
 
         if (file) {
@@ -62,7 +20,45 @@ document.getElementById("salvarBtn").addEventListener("click", function() {
         }
     });
 
-// Quando o site carregar, vamos tentar recuperar a ficha salva
+document.getElementById("salvarBtn").addEventListener("click", function() {
+    const nome = document.getElementById("nome").value;
+    const classe = document.getElementById("classe").value;
+    const vida = document.getElementById("vida").value;
+    const sanidade = document.getElementById("sanidade").value;
+    const PE = document.getElementById("PE").value;
+    const alma = document.getElementById("alma").value;
+    const aura = document.getElementById("aura").value;
+    const poder = document.getElementById("poder").value;
+    const inteligencia = document.getElementById("inteligencia").value;
+    const agilidade = document.getElementById("agilidade").value;
+    const forca = document.getElementById("forca").value;
+    const constituicao = document.getElementById("constituicao").value;
+    const presenca = document.getElementById("presenca").value;
+    const fotoBase64 = document.getElementById("fotoPersonagem").src;
+
+   const ficha = {
+        nome: nome,
+        classe: classe,
+        fotoUpload: fotoUpload,
+        vida: vida,
+        sanidade: sanidade,
+        PE: PE,
+        alma: alma,
+        aura: aura,
+        poder: poder,
+        inteligencia: inteligencia,
+        agilidade: agilidade,
+        forca: forca,
+        constituicao: constituicao,
+        presenca: presenca,
+        fotoBase64: fotoBase64
+    };
+
+    localStorage.setItem("fichaRPG", JSON.stringify(ficha));
+
+    alert("Ficha salva no navegador!");
+});
+
 window.addEventListener("load", function() {
     const fichaSalva = localStorage.getItem("fichaRPG");
 
@@ -70,8 +66,7 @@ window.addEventListener("load", function() {
         const ficha = JSON.parse(fichaSalva);
 
         document.getElementById("nome").value = ficha.nome;
-        document.getElementById("classe").value = ficha.classe;
-        document.getElementById("fotoUrl").value = ficha.fotoUrl;
+        document.getElementById("classe").value = ficha.classe
         document.getElementById("vida").value = ficha.vida;
         document.getElementById("sanidade").value = ficha.sanidade;
         document.getElementById("PE").value = ficha.PE;
@@ -86,7 +81,7 @@ window.addEventListener("load", function() {
         
         const fotoElemento = document.getElementById("fotoPersonagem");
         if(ficha.fotoBase64) {
-            fotoElemento.src = ficha.fotoBase64;
+            fotoElemento.src = ficha.fotoUpload;
             fotoElemento.style.display = "block";
         }
     }
