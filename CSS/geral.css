@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    background-color: #0b0b0b; /* Cor de fundo escura */
+    color: #f0f0f0; /* Cor do texto clara */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #FFD700; /* Dourado para os títulos */
+}
+
+/* Novo estilo para o container da foto e dados */
+.header-ficha {
+    display: flex; /* Transforma o container em um flex container */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    gap: 20px; /* Adiciona um espaço de 20px entre os itens */
+}
+
+/* Estilos para a imagem do personagem */
+#fotoPersonagem {
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+
+
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+
+
+
+
+/*cores para tudo*/
+
+.cor-vida {
+    color: red;
+}
+
+.cor-sanidade {
+    color: purple;
+}
+
+.cor-PE {
+    color: blue;
+}
+
+.cor-alma {
+    color: aquamarine;
+}
+
+.cor-aura {
+    color: greenyellow;
+}
+
+.status-vida label {
+    color: red;
+}
+
+.status-sanidade label {
+    color: #9370DB;
+}
+
+.status-pe label {
+    color: #4169E1;
+}
+
+.status-alma label {
+    color: #00FF7F;
+}
+
+.status-aura label {
+    color: #FFFF00;
+}
+
+.status-vida input {
+    color: red;
+}
+
+.status-sanidade input {
+    color: #9370DB; 
+}
+
+.status-pe input {
+    color: #4169E1; 
+}
+
+.status-alma input {
+    color: #00FF7F; 
+}
+
+.status-aura input {
+    color: #FFFF00;
+}

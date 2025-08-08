@@ -1,0 +1,12 @@
+#fundamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+#fundamentos-grid > div {
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+}

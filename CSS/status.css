@@ -1,0 +1,45 @@
+#status-container {
+    display: grid; /* Transforma o container em uma grade */
+    max-width: 350px;
+    grid-template-columns: 80px 1fr 1fr 80px; /* Cria 4 colunas: uma para o status, e 3 para os valores */
+    gap: 10px; /* Espaço entre as células */
+    margin: 20px 0;
+}
+
+/* Estilo para o cabeçalho da tabela */
+.status-header {
+    display: contents; /* Os filhos deste container vão participar diretamente da grade principal */
+}
+
+/* Estilo para os títulos do cabeçalho */
+.status-header span {
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #0b0b0b;
+    padding-left: 0;
+    text-align: center;
+}
+
+/* Estilo para cada linha de status */
+.status-row {
+    display: contents; /* Os filhos desta div vão participar da grade principal */
+}
+
+/* Estilo para as labels de status */
+.status-row label {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para os inputs */
+.status-row input {
+    background-color: #0b0b0b;
+    color: #FFD700;
+
+
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
