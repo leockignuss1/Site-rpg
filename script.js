@@ -86,3 +86,29 @@ window.addEventListener("load", function() {
         }
     }
 });
+
+// Lógica para alternar entre as abas
+document.addEventListener("DOMContentLoaded", function() {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove a classe 'active' de todos os botões e conteúdos
+            tabButtons.forEach(btn => btn.classList.remove("active"));
+            tabContents.forEach(content => content.classList.remove("active"));
+
+            // Adiciona a classe 'active' no botão clicado
+            button.classList.add("active");
+
+            // Pega o id do conteúdo que deve ser exibido
+            const targetId = button.getAttribute("data-target");
+            const targetContent = document.getElementById(targetId);
+
+            // Adiciona a classe 'active' no conteúdo correspondente
+            if (targetContent) {
+                targetContent.classList.add("active");
+            }
+        });
+    });
+});

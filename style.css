@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: #333; /* Cor de fundo escura */
+    background-color: #0b0b0b; /* Cor de fundo escura */
     color: #f0f0f0; /* Cor do texto clara */
     max-width: 800px;
     margin: 0 auto;
@@ -25,4 +25,173 @@ h1, h2 {
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     border: 2px solid #555;
     border-radius: 10px;
+}
+
+#fundamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+#fundamentos-grid > div {
+    background-color: #2b2b2b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para o container das abas */
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid #555;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões das abas */
+.tab-button {
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover nos botões */
+.tab-button:hover {
+    background-color: #666;
+}
+
+/* Estilo para a aba ativa */
+.tab-button.active {
+    background-color: #555;
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+    font-weight: bold;
+}
+
+/* Esconde todo o conteúdo da aba por padrão */
+.tab-content {
+    display: none;
+}
+
+/* Mostra apenas o conteúdo da aba ativa */
+.tab-content.active {
+    display: block;
+}
+
+#status-container {
+    display: grid; /* Transforma o container em uma grade */
+    max-width: 350px;
+    grid-template-columns: 80px 1fr 1fr 80px; /* Cria 4 colunas: uma para o status, e 3 para os valores */
+    gap: 10px; /* Espaço entre as células */
+    margin: 20px 0;
+}
+
+/* Estilo para o cabeçalho da tabela */
+.status-header {
+    display: contents; /* Os filhos deste container vão participar diretamente da grade principal */
+}
+
+/* Estilo para os títulos do cabeçalho */
+.status-header span {
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #0b0b0b;
+    padding-left: 0;
+    text-align: center;
+}
+
+/* Estilo para cada linha de status */
+.status-row {
+    display: contents; /* Os filhos desta div vão participar da grade principal */
+}
+
+/* Estilo para as labels de status */
+.status-row label {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para os inputs */
+.status-row input {
+    background-color: #0b0b0b;
+    color: #FFD700;
+    border: 1px solid #666;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*cores para tudo*/
+
+.cor-vida {
+    color: red;
+}
+
+.cor-sanidade {
+    color: purple;
+}
+
+.cor-PE {
+    color: blue;
+}
+
+.cor-alma {
+    color: aquamarine;
+}
+
+.cor-aura {
+    color: greenyellow;
+}
+
+.status-vida label {
+    color: red;
+}
+
+.status-sanidade label {
+    color: #9370DB;
+}
+
+.status-pe label {
+    color: #4169E1;
+}
+
+.status-alma label {
+    color: #00FF7F;
+}
+
+.status-aura label {
+    color: #FFFF00;
+}
+
+.status-vida input {
+    color: red;
+}
+
+.status-sanidade input {
+    color: #9370DB; 
+}
+
+.status-pe input {
+    color: #4169E1; 
+}
+
+.status-alma input {
+    color: #00FF7F; 
+}
+
+.status-aura input {
+    color: #FFFF00;
 }
